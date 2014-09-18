@@ -1,0 +1,11 @@
+language: python
+
+env:
+  - MODULES="Django>=1.6,<1.7"
+  - MODULES="Django>=1.7,<1.8"
+
+install:
+  - pip install $MODULES
+
+script:
+  - ./manage.py test
